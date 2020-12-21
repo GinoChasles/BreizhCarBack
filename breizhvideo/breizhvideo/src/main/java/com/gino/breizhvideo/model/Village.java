@@ -1,4 +1,4 @@
-package model;
+package com.gino.breizhvideo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,13 +11,15 @@ public class Village {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
         private String name;
-        private Integer zipCode;
+        private String postCode;
+
         public long getId() {
             return id;
         }
         public void setId(long id) {
             this.id = id;
         }
+
         public String getName() {
             return name;
         }
@@ -25,11 +27,11 @@ public class Village {
             this.name = name;
         }
 
-        public Integer getZipCode() {
-            return zipCode;
+        public String getZipCode() {
+            return postCode;
         }
-        public void setZipCode(Integer ZipCode) {
-            this.zipCode = zipCode;
+        public void setZipCode(String postCode) {
+            this.postCode = postCode;
         }
 
 }

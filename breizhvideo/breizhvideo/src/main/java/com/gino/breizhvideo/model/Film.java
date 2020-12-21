@@ -1,9 +1,16 @@
 package com.gino.breizhvideo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Film {
+
+  /*  @ManyToMany
+    private List<Actor> actors;
+    @ManyToMany
+    private List<Category> categories;*/
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -39,7 +46,7 @@ public class Film {
         this.description= description;
     }
 
-    public Integer getReleaseYear() { return releaseYear; }
+    /*public Integer getReleaseYear() { return releaseYear; }
     public void setReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
     }
@@ -47,6 +54,6 @@ public class Film {
     public Integer getLength() { return length; }
     public void setLength(Integer length) {
         this.length = length;
-    }
+    }*/
 
 }

@@ -2,12 +2,15 @@ package com.gino.breizhvideo.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
-    @Entity
+@Entity
 public class Preference {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
+   /* @ManyToOne
+    private Film film;*/
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(unique = true, nullable = false)
         private long id;
         private int vote;

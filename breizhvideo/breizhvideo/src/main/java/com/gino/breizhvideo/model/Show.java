@@ -2,9 +2,13 @@ package com.gino.breizhvideo.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Show {
+
+   /* @OneToMany
+    private List<Preference> preferences;*/
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

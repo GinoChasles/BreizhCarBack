@@ -19,10 +19,7 @@ public class PreferenceServiceImpl implements PreferenceService{
         }
 
         @Override
-        public List<Preference> findAll(String search) {
-            if(! "".equals(search))
-                return repository.findByNameContaining(search);
-            else
+        public List<Preference> findAll() {
                 return repository.findAll();
         }
 

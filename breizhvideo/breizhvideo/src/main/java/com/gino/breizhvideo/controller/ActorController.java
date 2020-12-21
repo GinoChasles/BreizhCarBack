@@ -21,7 +21,7 @@ public class ActorController {
         public ResponseEntity<List<Actor>> getAllActor(@RequestParam(value="search", defaultValue="") String search) {
             List<Actor> listActor;
             try{
-                listActor = service.findAll(search);
+                listActor = service.findAll();
             } catch (Exception e) {
                 return ResponseEntity.notFound().build();
             }

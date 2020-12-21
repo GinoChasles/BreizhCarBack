@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface PreferenceService {
         Optional<Preference> findById(Long id);
-        List<Preference> findAll (String search);
+        List<Preference> findAll ();
         Preference insert (Preference preference);
         Preference update (Long id, Preference preference);
         void delete (Long id);

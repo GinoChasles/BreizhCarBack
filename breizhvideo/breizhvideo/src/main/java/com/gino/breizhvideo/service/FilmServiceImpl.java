@@ -21,10 +21,8 @@ public class FilmServiceImpl implements FilmService {
         }
 
         @Override
-        public List<Film> findAll(String search) {
-            if(! "".equals(search))
-                return repository.findByNameContaining(search);
-            else
+        public List<Film> findAll() {
+
                 return repository.findAll();
         }
 
@@ -39,12 +37,9 @@ public class FilmServiceImpl implements FilmService {
 
             if(optionalFilm.isPresent()){
                 Film filmToUpdate = optionalFilm.get();
-                filmToUpdate.setName(film.getName());
+                filmToUpdate.setTitle(film.getTitle());
                 if (film.getDescription() != null){
                     filmToUpdate.setDescription(film.getDescription());}
-
-                if (film.getTitle() != null){
-                    filmToUpdate.setTitle(film.getTitle());}
 
                 if (film.getReleaseYear() != null){
                     filmToUpdate.setReleaseYear(film.getReleaseYear());}

@@ -19,11 +19,8 @@ public class ActorServiceImpl implements ActorService{
         }
 
         @Override
-        public List<Actor> findAll(String search) {
-            if(! "".equals(search))
-                return repository.findByNameContaining(search);
-            else
-                return repository.findAll();
+        public List<Actor> findAll() {
+           return repository.findAll();
         }
 
         @Override

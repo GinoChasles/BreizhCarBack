@@ -23,7 +23,7 @@ public class PreferenceController {
         public ResponseEntity<List<Preference>> getAllPreference(@RequestParam(value="search", defaultValue="") String search) {
             List<Preference> listPreference;
             try{
-                listPreference = service.findAll(search);
+                listPreference = service.findAll();
             } catch (Exception e) {
                 return ResponseEntity.notFound().build();
             }

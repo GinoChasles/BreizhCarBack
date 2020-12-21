@@ -20,11 +20,8 @@ public class ShowServiceImpl implements ShowService {
         }
 
         @Override
-        public List<Show> findAll(String search) {
-            if(! "".equals(search))
-                return repository.findByNameContaining(search);
-            else
-                return repository.findAll();
+        public List<Show> findAll() {
+            return repository.findAll();
         }
 
         @Override

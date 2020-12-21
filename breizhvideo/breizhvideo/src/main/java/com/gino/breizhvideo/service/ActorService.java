@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ActorService {
         Optional<Actor> findById(Long id);
-        List<Actor> findAll (String search);
+        List<Actor> findAll ();
         Actor insert (Actor actor);
         Actor update (Long id, Actor actor);
         void delete (Long id);

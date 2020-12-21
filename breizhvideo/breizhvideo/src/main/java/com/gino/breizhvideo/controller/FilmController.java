@@ -21,7 +21,7 @@ public class FilmController {
     public ResponseEntity<List<Film>> getAllFilm(@RequestParam(value="search", defaultValue="") String search) {
         List<Film> listFilm;
         try{
-            listFilm = service.findAll(search);
+            listFilm = service.findAll();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }

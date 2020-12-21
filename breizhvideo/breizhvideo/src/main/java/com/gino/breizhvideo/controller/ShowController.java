@@ -23,7 +23,7 @@ public class ShowController {
         public ResponseEntity<List<Show>> getAllShow(@RequestParam(value="search", defaultValue="") String search) {
             List<Show> listShow;
             try{
-                listShow = service.findAll(search);
+                listShow = service.findAll();
             } catch (Exception e) {
                 return ResponseEntity.notFound().build();
             }

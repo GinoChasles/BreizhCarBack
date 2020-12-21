@@ -42,8 +42,15 @@ public class FilmServiceImpl implements FilmService {
                 filmToUpdate.setName(film.getName());
                 if (film.getDescription() != null){
                     filmToUpdate.setDescription(film.getDescription());}
+
                 if (film.getTitle() != null){
                     filmToUpdate.setTitle(film.getTitle());}
+
+                if (film.getReleaseYear() != null){
+                    filmToUpdate.setReleaseYear(film.getReleaseYear());}
+
+                if (film.getLength() != null){
+                    filmToUpdate.setLength(film.getLength());}
                 return repository.save(filmToUpdate);
             }
             return null;

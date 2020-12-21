@@ -11,6 +11,8 @@ public class Film {
     private String name;
     private String title;
     private String description;
+    private Integer releaseYear;
+    private Integer length;
 
     public long getId() {
         return id;
@@ -19,9 +21,7 @@ public class Film {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
     public void setName(String name) {
         this.name = name;
     }
@@ -37,6 +37,16 @@ public class Film {
     }
     public void setDescription(String description) {
         this.description= description;
+    }
+
+    public Integer getReleaseYear() { return releaseYear; }
+    public void setReleaseYear(Integer releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public Integer getLength() { return length; }
+    public void setLength(Integer length) {
+        this.length = length;
     }
 
 }

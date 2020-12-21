@@ -7,13 +7,14 @@ import java.util.List;
 @Entity
 public class Preference {
 
-   /* @ManyToOne
-    private Film film;*/
+    @ManyToOne
+    private Film film;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(unique = true, nullable = false)
         private long id;
         private int vote;
+
 
         public long getId() {
             return id;

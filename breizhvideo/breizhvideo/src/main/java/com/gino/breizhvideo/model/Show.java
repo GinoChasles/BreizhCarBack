@@ -7,8 +7,8 @@ import java.util.List;
 @Entity
 public class Show {
 
-   /* @OneToMany
-    private List<Preference> preferences;*/
+    @OneToMany
+    private List<Preference> preferences;
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

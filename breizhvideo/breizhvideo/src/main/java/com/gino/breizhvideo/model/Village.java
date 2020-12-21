@@ -1,14 +1,19 @@
 package com.gino.breizhvideo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Village {
+
+
+
+    @OneToMany
+    private List<Show> shows;
+
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(unique = true, nullable = false)
         private long id;
         private String name;
         private String Post_Code;

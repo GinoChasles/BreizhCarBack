@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class VillageImpl implements VillageService{
+public class VillageServiceImpl implements VillageService{
 
     @Autowired
     private VillageRepository repository;
@@ -39,8 +39,8 @@ public class VillageImpl implements VillageService{
         if(optionalVillage.isPresent()){
             Village villageToUpdate = optionalVillage.get();
             villageToUpdate.setName(village.getName());
-            if (village.getZipCode() != null)
-                villageToUpdate.setZipCode(village.getZipCode());
+            if (village.getPost_Code() != null)
+                villageToUpdate.setPost_Code(village.getPost_Code());
             return repository.save(villageToUpdate);
         }
         return null;

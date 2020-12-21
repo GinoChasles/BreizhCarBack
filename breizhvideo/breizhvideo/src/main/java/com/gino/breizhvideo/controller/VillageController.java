@@ -44,7 +44,7 @@ public class VillageController {
     }
     @CrossOrigin
     @PutMapping("/villages/{id}")
-    ResponseEntity<Village> updateVillagee(@PathVariable(value="id") long id, @RequestBody Village village){
+    ResponseEntity<Village> updateVillage(@PathVariable(value="id") long id, @RequestBody Village village){
     Village updatedVillage = service.update(id, village);
     if(updatedVillage == null)
         return ResponseEntity.notFound().build();

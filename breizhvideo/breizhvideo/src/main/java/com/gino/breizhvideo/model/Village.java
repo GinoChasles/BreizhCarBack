@@ -11,7 +11,7 @@ public class Village {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
         private String name;
-        private String postCode;
+        private String Post_Code;
 
         public long getId() {
             return id;
@@ -27,11 +27,11 @@ public class Village {
             this.name = name;
         }
 
-        public String getZipCode() {
-            return postCode;
+        public String getPost_Code() {
+            return Post_Code;
         }
-        public void setZipCode(String postCode) {
-            this.postCode = postCode;
+        public void setPost_Code(String Post_Code) {
+            this.Post_Code= Post_Code;
         }
 
 }
